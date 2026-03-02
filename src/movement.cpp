@@ -1,8 +1,9 @@
-#include <bn_keypad.h>
-
 #include "movement.h"
 
-void dPadMoveSprite(bn::sprite_ptr& sprite, bn::fixed speed){
+#include <bn_keypad.h>
+#include <bn_fixed_point.h>
+
+void dPadMoveSprite(bn::sprite_ptr& sprite, bn::fixed speed) {
     bn::fixed dx = 0;
     bn::fixed dy = 0;
 
@@ -20,4 +21,4 @@ void dPadMoveSprite(bn::sprite_ptr& sprite, bn::fixed speed){
     }
 
     sprite.set_position(sprite.position() + bn::fixed_point(dx, dy));
-};
+}
